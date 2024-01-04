@@ -698,7 +698,7 @@ fun Context.getProUrl() = "https://play.google.com/store/apps/details?id=${baseC
 
 fun Context.getStoreUrl() = "https://play.google.com/store/apps/details?id=${packageName.removeSuffix(".debug")}"
 
-fun Context.getTimeFormat() = if (baseConfig.use24HourFormat) TIME_FORMAT_24 else TIME_FORMAT_12
+fun Context.getTimeFormat() = if (baseConfig.use24HourFormat) DATE_TIME_FULL_FORMAT_24 else DATE_TIME_FULL_FORMAT_12
 
 fun Context.getResolution(path: String): Point? {
     return if (path.isImageFast() || path.isImageSlow()) {
