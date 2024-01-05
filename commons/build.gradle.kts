@@ -8,8 +8,8 @@ plugins {
 }
 
 android {
-    compileSdk = libs.versions.app.build.compileSDKVersion.get().toInt()
 
+    compileSdkVersion(libs.versions.app.build.compileSDKVersion.get().toInt())
     defaultConfig {
         minSdk = libs.versions.app.build.minimumSDK.get().toInt()
         vectorDrawables.useSupportLibrary = true
