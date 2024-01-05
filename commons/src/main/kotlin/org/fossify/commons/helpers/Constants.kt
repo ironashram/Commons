@@ -397,6 +397,7 @@ const val TIME_FORMAT_24 = "HH:mm"
 
 const val DATE_TIME_FULL_FORMAT_12 = "MMM d, yyyy - hh:mm a"
 const val DATE_TIME_FULL_FORMAT_24 = "MMM d, yyyy - hh:mm"
+const val DATE_TIME_FULL_FORMAT_24_test = "MMM d, yyyy - hh:mm"
 
 // possible icons at the top left corner
 enum class NavigationIcon(@StringRes val accessibilityResId: Int) {
