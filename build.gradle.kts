@@ -5,11 +5,11 @@ plugins {
     alias(libs.plugins.parcelize).apply(false)
     alias(libs.plugins.library).apply(false)
     alias(libs.plugins.kotlinSerialization).apply(false)
-    `java-library`
+    `kotlin-dsl`
     `maven-publish`
 }
 
-group = "org.fossify.commons"
+group = "org.fossify"
 version = "1.0-SNAPSHOT"
 
 java {
@@ -20,8 +20,8 @@ java {
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
-            artifactId = "Fossify-Commons"
-            from(components["java"])
+            artifactId = "commons"
+            from(components["kotlin"])
         }
     }
     repositories {
