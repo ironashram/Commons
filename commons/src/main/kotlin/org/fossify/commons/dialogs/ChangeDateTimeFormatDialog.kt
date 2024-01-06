@@ -54,6 +54,7 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Uni
             changeDateTimeDialogRadioSix.text = formatDateSample(DATE_FORMAT_SIX)
             changeDateTimeDialogRadioSeven.text = formatDateSample(DATE_FORMAT_SEVEN)
             changeDateTimeDialogRadioEight.text = formatDateSample(DATE_FORMAT_EIGHT)
+            changeDateTimeDialogRadioNine.text = formatDateSample(DATE_FORMAT_FIFTEEN)
 
             changeDateTimeDialog24Hour.isChecked = activity.baseConfig.use24HourFormat
 
@@ -65,7 +66,8 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Uni
                 DATE_FORMAT_FIVE -> changeDateTimeDialogRadioFive
                 DATE_FORMAT_SIX -> changeDateTimeDialogRadioSix
                 DATE_FORMAT_SEVEN -> changeDateTimeDialogRadioSeven
-                else -> changeDateTimeDialogRadioEight
+                DATE_FORMAT_EIGHT -> changeDateTimeDialogRadioEight
+                else -> changeDateTimeDialogRadioNine
             }
             formatButton.isChecked = true
         }
@@ -87,7 +89,8 @@ class ChangeDateTimeFormatDialog(val activity: Activity, val callback: () -> Uni
             view.changeDateTimeDialogRadioFive.id -> DATE_FORMAT_FIVE
             view.changeDateTimeDialogRadioSix.id -> DATE_FORMAT_SIX
             view.changeDateTimeDialogRadioSeven.id -> DATE_FORMAT_SEVEN
-            else -> DATE_FORMAT_EIGHT
+            view.changeDateTimeDialogRadioEight.id -> DATE_FORMAT_EIGHT
+            else -> DATE_FORMAT_FIFTEEN
         }
 
         activity.baseConfig.use24HourFormat = view.changeDateTimeDialog24Hour.isChecked
@@ -120,6 +123,7 @@ fun ChangeDateTimeFormatAlertDialog(
             Pair(DATE_FORMAT_SIX, formatDateSample(DATE_FORMAT_SIX)),
             Pair(DATE_FORMAT_SEVEN, formatDateSample(DATE_FORMAT_SEVEN)),
             Pair(DATE_FORMAT_EIGHT, formatDateSample(DATE_FORMAT_EIGHT)),
+            Pair(DATE_FORMAT_FIFTEEN, formatDateSample(DATE_FORMAT_FIFTEEN)),
         )
     }
     val kinds = remember {
