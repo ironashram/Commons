@@ -391,13 +391,10 @@ const val DATE_FORMAT_ELEVEN = "yy-MM-dd"
 const val DATE_FORMAT_TWELVE = "yyMMdd"
 const val DATE_FORMAT_THIRTEEN = "yy.MM.dd"
 const val DATE_FORMAT_FOURTEEN = "yy/MM/dd"
+const val DATE_FORMAT_FIFTEEN = "MMM d, yyyy"
 
 const val TIME_FORMAT_12 = "hh:mm a"
 const val TIME_FORMAT_24 = "HH:mm"
-
-const val DATE_TIME_FULL_FORMAT_12 = "MMM d, yyyy - hh:mm a"
-const val DATE_TIME_FULL_FORMAT_24 = "MMM d, yyyy - hh:mm"
-const val DATE_TIME_FULL_FORMAT_24_test = "MMM d, yyyy - hh:mm"
 
 // possible icons at the top left corner
 enum class NavigationIcon(@StringRes val accessibilityResId: Int) {
@@ -502,7 +499,8 @@ fun getDateFormats() = arrayListOf(
     "MM-dd",
     "MMdd",
     "MM/dd",
-    "MM.dd"
+    "MM.dd",
+    "MMM d, yyyy"
 )
 
 fun getDateFormatsWithYear() = arrayListOf(
@@ -513,6 +511,7 @@ fun getDateFormatsWithYear() = arrayListOf(
     DATE_FORMAT_TWELVE,
     DATE_FORMAT_THIRTEEN,
     DATE_FORMAT_FOURTEEN,
+    DATE_FORMAT_FIFTEEN
 )
 
 val normalizeRegex = "\\p{InCombiningDiacriticalMarks}+".toRegex()
