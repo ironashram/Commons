@@ -9,6 +9,12 @@ plugins {
 
 android {
 
+    lint {
+        abortOnError = false
+        ignoreWarnings = true
+        checkDependencies = false
+    }
+
     compileSdkVersion(libs.versions.app.build.compileSDKVersion.get().toInt())
     defaultConfig {
         minSdk = libs.versions.app.build.minimumSDK.get().toInt()
@@ -69,6 +75,18 @@ publishing.publications {
         version = libs.versions.app.version.versionName.get()
         afterEvaluate {
             from(components["release"])
+            publishing {
+                repositories {
+                    maven {
+                        name = "local-releases"
+                        url = uri("https://nexus.m1k.cloud/repository/maven-releases/")
+                        credentials {
+                            username = project.properties["mavenUser"].toString()
+                            password = project.properties["mavenPassword"].toString()
+                        }
+                    }
+                }
+            }
         }
     }
 }

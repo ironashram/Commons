@@ -4,7 +4,7 @@ kotlin = "1.9.21"
 kotlin-immutable-collections = "0.3.7"
 #KSP
 kotlinxSerializationJson = "1.6.2"
-ksp = "1.9.10-1.0.13"
+ksp = "1.9.21-1.0.15"
 #Androidx
 androidx-customView = "1.2.0-alpha02"
 androidx-customViewPooling = "1.0.0"
@@ -54,7 +54,7 @@ app-build-kotlinJVMTarget = "17"
 app-version-appId = "org.fossify.commons"
 app-version-groupId = "org.fossify.commons"
 app-version-versionCode = "1"
-app-version-versionName = "1.0.0"
+app-version-versionName = "1.0.99"
 [libraries]
 #Android X
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
